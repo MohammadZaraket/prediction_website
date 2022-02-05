@@ -3,10 +3,6 @@ body{
 }
 
 
-.content {
-    text-align: center;
-}
-
 
 .image-box{
     position: relative;
@@ -38,6 +34,24 @@ body{
 	text-align:center;
 }
 
+.row {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+.container {
+    
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+       
+}
+
 
 /*Responsive media query */
 
@@ -46,5 +60,25 @@ body{
     .col-12 {
       width: 100%;
     }
+
+    .col-6{
+        width: 49%;
+    }
     
+.container {
+    width: 750px;
   }
+
+
+
+  }
+
+  @media screen and (max-width:750px) {
+  
+
+.col-6{
+        width: 100%;
+        margin: 0;
+    }
+
+}
