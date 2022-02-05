@@ -30,3 +30,21 @@ body{
 .image-box:hover img {
     transform: scale(1.1);
 }
+
+
+
+.heading{
+    margin: 10px auto;
+	text-align:center;
+}
+
+
+/*Responsive media query */
+
+@media (min-width: 770px) {
+
+    .col-12 {
+      width: 100%;
+    }
+    
+  }
