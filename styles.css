@@ -1,0 +1,13 @@
+.content {
+    text-align: center;
+}
+
+
+.image-box{
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    width: 550px;
+    border: 10px solid rgb(146, 3, 3);
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.4);
+}
