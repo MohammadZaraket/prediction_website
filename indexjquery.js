@@ -13,4 +13,25 @@ $("img").attr("src",content);
 });
 
 
+
+
+
+
+});
+
+
+$(function(){
+
+    $.getJSON("https://api.nationalize.io/?name=mohammad", function(data){
+
+console.log(data);
+
+var content2 = "";
+content2 += data.country;
+console.log(content2);
+
+$("#test").html(content2);
+
+});
+
 });

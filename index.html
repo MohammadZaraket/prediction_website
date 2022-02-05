@@ -37,22 +37,31 @@
 
         <section>
             <div class="container">
-                <div class="row">
-
-                    <div class="col-6">
-                            <label for="name">Your Name:</label>
-                            <input type="text" id="name" name="name">
-                    </div>
-                    <div class="col-6">
-                        <button type="button">Click!</button> 
-                    </div>
-                </div>
+                    <form id="form">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="name">Your Name:</label>
+                                <input type="text" id="name" name="name" onfocus=" this.value= ''">
+                            </div>
+                            <div class="col-6">
+                                <input type="submit" id="btn" value="CLICK!">
+                            </div>
+                        </div>
+                    </form>                  
             </div>
         </section>
 
 
+  
+        <!--
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="indexjquery.js"></script>
+      
+        -->
+
+        <script src="index.js"></script>
+
+
     </body>
 
 </html>
