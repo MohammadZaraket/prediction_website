@@ -16,6 +16,16 @@ form.onsubmit = async (event) => {
     event.preventDefault();
 
     let input_name = document.getElementById("name").value;
+    let reminder = document.getElementById("guide");
+
+    if(input_name==""){
+       reminder.classList.add("red");
+    }
+
+    else {
+        reminder.classList.remove("red");
+
+  
 
     let age_response = await fetch(age_url+input_name);
     let age_result = await age_response.json();
@@ -26,16 +36,25 @@ form.onsubmit = async (event) => {
     let nation_response = await fetch(nationality_url+input_name);
     let nation_result = await nation_response.json();
 
-    displayPrediction(age_result.age,gender_result.gender,nation_result.country[0].country_id);
+    console.log(nation_result.country)
+
+    displayPrediction(age_result.age,gender_result.gender,nation_result.country);
+}
+
 };
 
 
 function displayPrediction(predicted_age,predicted_gender,predicted_nation)
 {
 
-
+    let nations="";
     display_age.innerHTML=predicted_age;
     display_gender.innerHTML=predicted_gender;
-    display_nation.innerHTML= predicted_nation;
+
+    for (var i=0; i<predicted_nation.length;i++)
+    {
+        nations+=predicted_nation[i].country_id + ", ";
+    }
+    display_nation.innerHTML= nations;
 
 };
