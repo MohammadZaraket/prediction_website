@@ -12,8 +12,7 @@ let display_nation = document.getElementById("predicted-nation");
 let display_gender = document.getElementById("predicted-gender");
 
 
-
-window.onload = async (event) => {
+window.onload = async (event) => {  // Display random dog image when loading page
     event.preventDefault();
 
     let dog_response = await fetch(dog_url);
@@ -25,13 +24,16 @@ window.onload = async (event) => {
 
 form.onsubmit = async (event) => {
     event.preventDefault();
+
     let input_name = document.getElementById("name").value;
    
     if(input_name==""){
-       reminder.classList.add("red");
+       reminder.classList.add("red"); // in case the user didn't enter a name
     }
-    else{
+
+    else {
         reminder.classList.remove("red");
+
         let age_response = await fetch(age_url+input_name);
         let age_result = await age_response.json();
 
@@ -42,12 +44,9 @@ form.onsubmit = async (event) => {
         let nation_result = await nation_response.json();
 
         displayPrediction(age_result.age,gender_result.gender,nation_result.country);
-    }
-};
+}};
 
-
-function displayPrediction(predicted_age,predicted_gender,predicted_nation)
-{
+function displayPrediction(predicted_age,predicted_gender,predicted_nation){
 
     let nations="";
     display_age.innerHTML=predicted_age;
@@ -58,5 +57,4 @@ function displayPrediction(predicted_age,predicted_gender,predicted_nation)
         nations+=predicted_nation[i].country_id + ", ";
     }
     display_nation.innerHTML= nations;
-
 };

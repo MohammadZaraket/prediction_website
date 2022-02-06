@@ -1,3 +1,4 @@
+//Nothing To see HERE, Just for Learning purposes
 $(function() {
 
 $.getJSON("https://dog.ceo/api/breeds/image/random", function(data){
@@ -11,9 +12,6 @@ console.log(content);
 $("img").attr("src",content);
 
 });
-
-
-
 
 
 

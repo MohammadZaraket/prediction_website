@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 
         <meta charset="UTF-8">
@@ -7,20 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prediction Website</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="index.js"></script>
-
+        
     </head>
 
     <body>
-
         <section>
             <div>
-                <div>
-                    <div class="container">
-                        <div class="image-box">
-                            <img src="" alt="Random Dog Image" id="image" width="500" height="250" />
-                        </div>    
-                    </div>
+                <div class="container">
+                    <div class="image-box">
+                        <img src="" alt="Random Dog Image" id="image" width="500" height="250" />
+                    </div>    
                 </div>
             </div>
         </section>
@@ -38,49 +35,44 @@
 
         <section>
             <div class="container">
-                    <form id="form">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="name">Your Name:</label>
-                                <input type="text" id="name" name="name" onfocus=" this.value= ''">
-                            </div>
-                            <div class="col-6">
-                                <input type="submit" id="btn" value="CLICK!">
-                            </div>
+                <form id="form">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" onfocus=" this.value= ''">
                         </div>
-                    </form>                  
+                        <div class="col-6">
+                            <input type="submit" id="btn" value="CLICK!">
+                        </div>
+                    </div>
+                </form>                  
             </div>
         </section>
 
         <section>
             <div class="container">
-                        <div class="row">
-                            <div class="col-4">
-                                <label for="age">Your Predicted Age:</label>
-                                <h2 id="predicted-age" name="age">---</h2>
-                            </div>
-                            <div class="col-4">
-                                <label for="gender">Your Predicted Gender:</label>
-                                <h2 id="predicted-gender" name="gender">---</h2>
-                            </div>
-                            <div class="col-4">
-                                <label for="nation">Your Predicted Nationality:</label>
-                                <h2 id="predicted-nation" name="nation">---</h2>
-                            </div>
-                        </div>               
+                <div class="row">
+                    <div class="col-4">
+                        <label for="age">Your Predicted Age:</label>
+                        <h2 id="predicted-age" name="age">---</h2>
+                    </div>
+                    <div class="col-4">
+                        <label for="gender">Your Predicted Gender:</label>
+                        <h2 id="predicted-gender" name="gender">---</h2>
+                    </div>
+                    <div class="col-4">
+                        <label for="nation">Your Predicted Nationality:</label>
+                        <h2 id="predicted-nation" name="nation">---</h2>
+                    </div>
+                </div>               
             </div>
         </section>
-
-
-  
+        
         <!--
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="indexjquery.js"></script>
-      
         -->
-
-      
-
+        <script src="index.js"></script>
 
     </body>
 
